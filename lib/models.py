@@ -27,7 +27,7 @@ class Review(Base):
     user_id = Column(Integer(), ForeignKey('users.id'))
 
     def __repr__(self):
-       return f'Review(id={self.id})'
+        return f'Review(id={self.id})'
 
 class User(Base):
     __tablename__ = 'users'
@@ -39,4 +39,4 @@ class User(Base):
         creator=lambda gm: Review(game=gm))
 
     def __repr__(self):
-       return f'User(id={self.id})'
+        return f'User(id={self.id})'
